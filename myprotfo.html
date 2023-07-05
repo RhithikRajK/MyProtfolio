@@ -9,7 +9,11 @@
     <script>
       function viewPDF() {
           var pdfUrl = "https://github.com/RhithikRajK/MyProtfolio/blob/e6c4500fbebbbee6bd7fa31325eea379786c629d/pdf/Resume.pdf";
-          window.open(pdfUrl, "_blank");
+          var link = document.createElement("a");
+          link.href = pdfUrl;
+          link.download = "RhithikResume.pdf"; // Set the desired filename for the downloaded PDF
+          link.target = "_blank"; // Optional, opens the download link in a new tab
+          link.click();
       }
       document.getElementById('contactButton').addEventListener('click', function() {
         var recipient = 'rhithikraj2002@gmail.com';
