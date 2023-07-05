@@ -15,13 +15,15 @@
           link.target = "_blank"; // Optional, opens the download link in a new tab
           link.click();
       }
-      document.getElementById('contactButton').addEventListener('click', function() {
-        var recipient = 'rhithikraj2002@gmail.com';
-        var subject = ' ';
-        var body = ' ';
-        var mailtoLink = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        window.location.href = mailtoLink;
-      });
+     function contact(){
+          document.getElementById('contactButton').addEventListener('click', function() {
+            var recipient = 'rhithikraj2002@gmail.com';
+            var subject = ' ';
+            var body = ' ';
+            var mailtoLink = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            window.location.href = mailtoLink;
+          });
+     }
     </script>
 </head>
 <body>
@@ -98,7 +100,7 @@
         <a href="https://wa.me/qr/46MAGBCAPHHXE1" ><img class="Groupwhatsapp1" style="width: 22px; height: 22px" src="images/Groupwhatsapp.png" /></a>
         <a href="https://rhithikrajk.github.io/MyProtfolio/myprotfo.html"><img class="Groupbrowser1" style="width: 23px; height: 22px" src="images/Groupbrowser.png" /></a>
         <a href="http://www.linkedin.com/in/rhithik-raj-k-b37461201"><img class="Vectorlinkdin1" style="width: 23px; height: 22px" src="images/Vectorlinkdin.png" /></a>
-        <a id="contact"><img class="Groupmail1" style="width: 23px; height: 19px" src="images/Groupmail.png" /></a>
+        <a id="contact" onclick="contact()"><img class="Groupmail1" style="width: 23px; height: 19px" src="images/Groupmail.png" /></a>
         <a href="https://github.com/RhithikRajK"><img class="Uniongit1" style="width: 26px; height: 25px" src="images/Uniongit.png" /></a>
       </div>
       <button id="downloadButton" class="downloadButton" onclick="viewPDF()" style="background-image: url('images/Button.png'); width: 379.96px; height: 60.74px; left: 34px; top: 171px; position: absolute"></button>
